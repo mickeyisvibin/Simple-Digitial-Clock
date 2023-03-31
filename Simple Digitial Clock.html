@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <style>
+body {
+    font-family: 'Orbitron';font-size: 22px;
+}
+    body {color:rgb(255, 90, 175)}
+
+    body{ background-color:rgb(122, 4, 126)}
+
+    </style>
+
+<body onload="startTime()">
+
+  <h2>JavaScript Clock</h2>
+  
+  <div id="txt"></div>
+  
+  <script>
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+  
+  <button>12 hours</button>
+  <button>24 hours</button>
+  </body>
+  </html>
+  
+
+
+    </html>
+
+
+
+</html>
